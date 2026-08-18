@@ -4,7 +4,7 @@ Agent Skills I've built and use. Portable by design — each one follows the ope
 [Agent Skills](https://agentskills.io) standard, so the same folder works in Claude, ChatGPT,
 Copilot, Cursor, and Gemini CLI without modification.
 
-[![Spec compliant](https://github.com/leandrocosta/skillset/actions/workflows/validate.yml/badge.svg)](https://github.com/leandrocosta/skillset/actions/workflows/validate.yml)
+[![Spec compliant](https://github.com/leocosts/skillset/actions/workflows/validate.yml/badge.svg)](https://github.com/leocosts/skillset/actions/workflows/validate.yml)
 
 ## Skills
 
@@ -17,7 +17,7 @@ Copilot, Cursor, and Gemini CLI without modification.
 Clone once:
 
 ```bash
-git clone https://github.com/leandrocosta/skillset.git ~/skillset
+git clone https://github.com/leocosts/skillset.git ~/skillset
 ```
 
 Then link the skills you want into the directory your tool reads.
@@ -100,4 +100,4 @@ under Apache-2.0; its licence is included at `tools/LICENSE-quick_validate.txt`.
 
 ## Author
 
-Leandro Costa — product designer. [github.com/leandrocosta](https://github.com/leandrocosta)
+Leandro Costa — product designer. [github.com/leocosts](https://github.com/leocosts)
