@@ -1,0 +1,18 @@
+{
+  "skill": "skill-maker",
+  "notes": "Positive cases are phrasings that should load skill-maker. Negative cases are adjacent requests it must stay out of - most are about *using* skills or about this repo's tooling, not about authoring a new skill.",
+  "cases": [
+    {"prompt": "I want to create a new skill", "should_trigger": true},
+    {"prompt": "help me turn this prompt I keep reusing into a skill", "should_trigger": true},
+    {"prompt": "add a skill for reviewing design specs", "should_trigger": true},
+    {"prompt": "scaffold a skill that summarises user interviews", "should_trigger": true},
+    {"prompt": "how should I structure a SKILL.md?", "should_trigger": true},
+    {"prompt": "check whether this skill is spec compliant", "should_trigger": true},
+    {"prompt": "will this skill work in ChatGPT and Cursor too?", "should_trigger": true},
+    {"prompt": "what skills do I have installed?", "should_trigger": false},
+    {"prompt": "run the validator on everything", "should_trigger": false},
+    {"prompt": "use my design-review skill on this mockup", "should_trigger": false},
+    {"prompt": "write me a README for this project", "should_trigger": false},
+    {"prompt": "commit and push these changes", "should_trigger": false}
+  ]
+}

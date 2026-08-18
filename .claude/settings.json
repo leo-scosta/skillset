@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(tools/validate.sh)",
+      "Bash(tools/validate.sh:*)",
+      "Bash(./tools/validate.sh)",
+      "Bash(./tools/validate.sh:*)",
+      "Bash(.venv/bin/python tools/quick_validate.py:*)",
+      "Bash(python3 tools/quick_validate.py:*)"
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+# Local validator environment
+.venv/
+
+# Packaged skill artifacts
+*.skill
+dist/
+
+# Python
+__pycache__/
+*.pyc
+
+# macOS
+.DS_Store

@@ -1,0 +1,65 @@
+name: validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  spec-compliance:
+    name: Agent Skills spec compliance
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install PyYAML
+        run: pip install pyyaml
+
+      - name: Validate every skill
+        run: |
+          failed=0
+          for dir in skills/*/; do
+            name=$(basename "$dir")
+            if out=$(python3 tools/quick_validate.py "$dir" 2>&1); then
+              echo "::notice title=$name::valid"
+              echo "PASS  $name"
+            else
+              echo "::error title=$name::$out"
+              echo "FAIL  $name — $out"
+              failed=1
+            fi
+          done
+          exit $failed
+
+      - name: Check required companion files
+        run: |
+          failed=0
+          for dir in skills/*/; do
+            name=$(basename "$dir")
+            if [ ! -f "$dir/README.md" ]; then
+              echo "::error title=$name::missing README.md (see AGENTS.md, rule 4)"
+              failed=1
+            fi
+            if [ ! -f "$dir/evals/evals.json" ]; then
+              echo "::error title=$name::missing evals/evals.json (see AGENTS.md)"
+              failed=1
+            fi
+          done
+          exit $failed
+
+      - name: Check every skill is listed in README
+        run: |
+          failed=0
+          for dir in skills/*/; do
+            name=$(basename "$dir")
+            if ! grep -q "skills/$name" README.md; then
+              echo "::error title=$name::not listed in the README skills table"
+              failed=1
+            fi
+          done
+          exit $failed
