@@ -9,5 +9,9 @@ All notable changes to this collection are recorded here.
 - `skill-maker` — scaffolds a new skill into this repo following its conventions: writes
   `SKILL.md` and `README.md`, seeds `evals/evals.json` from interview answers, and runs the
   spec validator.
+- `tools/link-skills.sh` — symlinks every skill into `~/.claude/skills/` and
+  `~/.agents/skills/`, so adding a skill makes it available across Claude Code, Codex,
+  Cursor, Copilot, and Gemini CLI in one command. Validates first, never clobbers real
+  files, supports `--dry-run` and `--prune`.
 - Repository scaffolding: `AGENTS.md` conventions, `tools/validate.sh` and the vendored
   `quick_validate.py`, and a GitHub Actions workflow that validates every skill on push.

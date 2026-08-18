@@ -5,6 +5,10 @@
       "Bash(tools/validate.sh:*)",
       "Bash(./tools/validate.sh)",
       "Bash(./tools/validate.sh:*)",
+      "Bash(tools/link-skills.sh)",
+      "Bash(tools/link-skills.sh:*)",
+      "Bash(./tools/link-skills.sh)",
+      "Bash(./tools/link-skills.sh:*)",
       "Bash(.venv/bin/python tools/quick_validate.py:*)",
       "Bash(python3 tools/quick_validate.py:*)"
     ]

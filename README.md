@@ -37,6 +37,20 @@ mkdir -p ~/.claude/skills && ln -s ~/skillset/skills/skill-maker ~/.claude/skill
 
 Symlinking rather than copying means `git pull` updates every tool at once.
 
+### Linking everything at once
+
+If you work from a clone, `tools/link-skills.sh` links **every** skill in the repo into both
+`~/.claude/skills/` and `~/.agents/skills/`, so a new skill becomes available everywhere with
+one command:
+
+```bash
+tools/link-skills.sh              # link all skills into all known tool directories
+tools/link-skills.sh --dry-run    # preview without changing anything
+tools/link-skills.sh --prune      # also clean up links to deleted skills
+```
+
+It validates before linking, never overwrites a real file or directory, and is safe to re-run.
+
 ### Where each tool looks
 
 | Tool | User-level | Project-level |

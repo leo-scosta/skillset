@@ -101,6 +101,9 @@ claude.ai upload path, so a skill that fails here will be rejected there too.
 
 - Add a row to the skills table in the repo `README.md`.
 - Add an entry under `CHANGELOG.md`.
+- Run `tools/link-skills.sh` so the new skill is available in the user's local tools.
+  Mention that a newly created skills directory needs a restart of the tool before it
+  is picked up.
 
 ## Checks before calling it done
 

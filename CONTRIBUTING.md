@@ -21,6 +21,7 @@ The fastest route is the `skill-maker` skill, which enforces the conventions for
    ones that should not.
 4. Add a row to the skills table in `README.md` and an entry in `CHANGELOG.md`.
 5. Run `tools/validate.sh`.
+6. Run `tools/link-skills.sh` to try it in your own tools.
 
 ## What CI checks
 

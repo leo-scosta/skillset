@@ -67,6 +67,9 @@ Use the `skill-maker` skill — it enforces all of the above. If writing by hand
 1. Add a row to the skills table in `README.md`.
 2. Add an entry to `CHANGELOG.md`.
 3. Run `tools/validate.sh`.
+4. Run `tools/link-skills.sh` to make it available to your local tools.
+
+A skills directory that didn't exist when your session started isn't watched yet, so restart Claude Code the first time one is created.
 
 ## The description field
 
