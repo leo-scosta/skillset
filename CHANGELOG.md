@@ -6,6 +6,12 @@ All notable changes to this collection are recorded here.
 
 ### Added
 
+- `web-copy` — reviews or drafts website copy at senior-copywriter level. Default en-GB,
+  professional-friendly tone. Ships with an eight-line rubric (clarity, scannability, en-GB,
+  SEO, persuasion, CTA, tone, trust) and on-demand references covering en-GB spelling,
+  on-page SEO, conversion frameworks (AIDA / PAS / StoryBrand / BAB / Schwartz stages),
+  microcopy, page patterns, and a named-author canon from Ogilvy to Cialdini. `WebFetch`
+  only — no paid connectors.
 - `skill-maker` — scaffolds a new skill into this repo following its conventions: writes
   `SKILL.md` and `README.md`, seeds `evals/evals.json` from interview answers, and runs the
   spec validator.

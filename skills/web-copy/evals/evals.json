@@ -1,0 +1,23 @@
+{
+  "skill": "web-copy",
+  "notes": "Positive cases are phrasings that should load web-copy. Negative cases are adjacent requests it must stay out of — writing that isn't website copy (product docs, code comments, emails, translations), or general SEO/marketing strategy questions that aren't about copy.",
+  "cases": [
+    {"prompt": "improve the copy on my landing page", "should_trigger": true},
+    {"prompt": "review this hero section and rewrite it", "should_trigger": true},
+    {"prompt": "make my pricing page more persuasive", "should_trigger": true},
+    {"prompt": "check the SEO on my home page copy", "should_trigger": true},
+    {"prompt": "rewrite this in British English", "should_trigger": true},
+    {"prompt": "draft a pricing page for a small-business bookkeeping app", "should_trigger": true},
+    {"prompt": "write a hero and CTA for this SaaS", "should_trigger": true},
+    {"prompt": "audit the copy on https://example.com and suggest fixes", "should_trigger": true},
+    {"prompt": "improve my meta title and meta description", "should_trigger": true},
+    {"prompt": "these buttons say Submit and Learn More — help me fix them", "should_trigger": true},
+    {"prompt": "write me a technical blog post about kubernetes", "should_trigger": false},
+    {"prompt": "translate this page to French", "should_trigger": false},
+    {"prompt": "review this code", "should_trigger": false},
+    {"prompt": "help me build a keyword research strategy for the next quarter", "should_trigger": false},
+    {"prompt": "generate a logo for my brand", "should_trigger": false},
+    {"prompt": "write API documentation for this endpoint", "should_trigger": false},
+    {"prompt": "draft a cold outreach email to a prospect", "should_trigger": false}
+  ]
+}

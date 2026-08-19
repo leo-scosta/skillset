@@ -11,6 +11,7 @@ Copilot, Cursor, and Gemini CLI without modification.
 | Skill | What it does |
 | --- | --- |
 | [`skill-maker`](skills/skill-maker) | Scaffolds a new skill into this repo — writes `SKILL.md` and `README.md`, seeds eval cases, runs the spec validator. |
+| [`web-copy`](skills/web-copy) | Reviews or drafts website copy at senior-copywriter level — en-GB, SEO-sound, conversion-focused, friendly. Runs a rubric drawn from GOV.UK, NN/g, Google Search Central, Copyhackers, and the direct-response canon. |
 
 ## Install
 
