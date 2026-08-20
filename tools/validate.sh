@@ -28,9 +28,20 @@ fi
 
 if [ $# -gt 0 ]; then
   targets=()
-  for name in "$@"; do targets+=("skills/${name%/}"); done
+  for name in "$@"; do
+    n="${name%/}"
+    # Prefer skills/, fall back to skills-private/, or keep the public path
+    # so the "not found" error still points somewhere sensible.
+    if [ -d "skills/$n" ]; then targets+=("skills/$n")
+    elif [ -d "skills-private/$n" ]; then targets+=("skills-private/$n")
+    else targets+=("skills/$n"); fi
+  done
 else
-  targets=(skills/*/)
+  # Iterate public then private. `[ -d ]` filters out the literal glob if a
+  # folder is empty or absent.
+  targets=()
+  for d in skills/*/;         do [ -d "$d" ] && targets+=("$d"); done
+  for d in skills-private/*/; do [ -d "$d" ] && targets+=("$d"); done
 fi
 
 failed=0

@@ -49,13 +49,31 @@ Name it for what it does, not who made it. No personal initials or prefixes: the
 the command people type and a primary relevance signal, and a prefix degrades both. Authorship
 belongs in `metadata.author`.
 
-Check `skills/` for an existing skill that already covers the request. Extending one is almost
-always better than adding a near-duplicate that competes with it for triggering.
+Check both `skills/` and `skills-private/` (if present) for an existing skill that already
+covers the request. Extending one is almost always better than adding a near-duplicate that
+competes with it for triggering.
 
-### 3. Create the files
+### 3. Ask whether the skill is public or private
+
+The repo has two skill folders — pick which one this belongs in **before** creating files:
+
+- `skills/` — the public folder, tracked by the outer git repo, pushed to a public GitHub.
+  Use for skills the user is happy to share.
+- `skills-private/` — a nested private git repo (pushed to a private GitHub). Gitignored by
+  the outer repo. Use for personal, client-specific, or experimental skills the user does
+  not want public.
+
+Ask the user *"public or private?"* if it isn't obvious from what they said. Default to
+public unless they've said otherwise or the skill obviously touches private material (client
+names, personal files, credentials, internal workflows).
+
+If the user picks private and `skills-private/` doesn't exist yet, tell them to run the
+setup first (see the repo `README.md`) — do not create it silently.
+
+### 4. Create the files
 
 ```
-skills/<name>/
+<folder>/<name>/            # <folder> is skills/ or skills-private/
 ├── SKILL.md          # required — for the agent
 ├── README.md         # required here — for the human
 ├── references/       # only if SKILL.md would otherwise exceed ~500 lines
@@ -71,7 +89,7 @@ Start from `assets/skill-template.md`. Follow `references/spec-rules.md` for the
 and set `metadata.author` and `metadata.version` (`"1.0"`, quoted — metadata values must be
 strings).
 
-### 4. Seed the evals
+### 5. Seed the evals
 
 Write the trigger phrases from step 1 into `evals/evals.json`:
 
@@ -88,22 +106,33 @@ Write the trigger phrases from step 1 into `evals/evals.json`:
 Include the negative cases. A skill that fires on everything is worse than one that fires on
 nothing, because it degrades every unrelated request.
 
-### 5. Validate
+### 6. Validate
 
 ```
 tools/validate.sh <name>
 ```
 
-Fix whatever it reports and run it again until it passes. It enforces the same rules as the
-claude.ai upload path, so a skill that fails here will be rejected there too.
+Works for both public and private skills — the validator scans `skills/` and
+`skills-private/`. Fix whatever it reports and run again until it passes. It enforces the
+same rules as the claude.ai upload path, so a skill that fails here will be rejected there
+too.
 
-### 6. Register it
+### 7. Register it
 
-- Add a row to the skills table in the repo `README.md`.
-- Add an entry under `CHANGELOG.md`.
+For **public** skills:
+
+- Add a row to the outer repo's `README.md` skills table.
+- Add an entry under the outer repo's `CHANGELOG.md`.
 - Run `tools/link-skills.sh` so the new skill is available in the user's local tools.
-  Mention that a newly created skills directory needs a restart of the tool before it
-  is picked up.
+
+For **private** skills:
+
+- If `skills-private/` has its own `README.md` / `CHANGELOG.md`, update those instead —
+  never mention private skills in the outer public README (they'd leak the names).
+- Still run `tools/link-skills.sh` — it symlinks from both folders.
+
+Either way, mention that a newly created skills directory needs a restart of the tool before
+it is picked up.
 
 ## Checks before calling it done
 

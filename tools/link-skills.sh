@@ -55,25 +55,30 @@ for dir in "${targets[@]}"; do
     done
   fi
 
-  for src in "$REPO"/skills/*/; do
-    name=$(basename "$src")
-    dest="$dir/$name"
+  # Public skills first, then private. `[ -d ]` guards against the literal
+  # glob when a folder is empty or missing.
+  for base in skills skills-private; do
+    for src in "$REPO/$base"/*/; do
+      [ -d "$src" ] || continue
+      name=$(basename "$src")
+      dest="$dir/$name"
 
-    if [ -L "$dest" ]; then
-      current=$(readlink "$dest")
-      if [ "$current" = "${src%/}" ]; then
-        echo "  ok       $name"
-        continue
+      if [ -L "$dest" ]; then
+        current=$(readlink "$dest")
+        if [ "$current" = "${src%/}" ]; then
+          echo "  ok       $name"
+          continue
+        fi
+        echo "  relink   $name (was -> $current)"
+        run ln -sfn "${src%/}" "$dest"
+      elif [ -e "$dest" ]; then
+        # A real file or directory: someone else owns this name. Don't clobber it.
+        echo "  CONFLICT $name — a real file/directory already exists here, leaving it alone" >&2
+      else
+        echo "  linked   $name"
+        run ln -s "${src%/}" "$dest"
       fi
-      echo "  relink   $name (was -> $current)"
-      run ln -sfn "${src%/}" "$dest"
-    elif [ -e "$dest" ]; then
-      # A real file or directory: someone else owns this name. Don't clobber it.
-      echo "  CONFLICT $name — a real file/directory already exists here, leaving it alone" >&2
-    else
-      echo "  linked   $name"
-      run ln -s "${src%/}" "$dest"
-    fi
+    done
   done
 done
 

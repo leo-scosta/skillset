@@ -11,3 +11,7 @@ __pycache__/
 
 # macOS
 .DS_Store
+
+# Private skills — separate git repo pushed to a private GitHub repo.
+# The outer public repo must not track anything under this path.
+skills-private/

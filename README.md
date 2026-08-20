@@ -14,6 +14,31 @@ Copilot, Cursor, and Gemini CLI without modification.
 | [`web-copy`](skills/web-copy) | Reviews or drafts website copy at senior-copywriter level — en-GB, SEO-sound, conversion-focused, friendly. Runs a rubric drawn from GOV.UK, NN/g, Google Search Central, Copyhackers, and the direct-response canon. |
 | [`web-design`](skills/web-design) | Runs a five-stage web-design pass — typography, colour, components, motion, accessibility — on a page or section. Open-source fonts only, WCAG AA minimum (AAA where cheap), every motion recommendation paired with a reduced-motion fallback and a lighter alternative. |
 
+## Private skills
+
+An optional `skills-private/` folder sits alongside `skills/` for skills you don't want on
+the public repo — client work, personal experiments, anything sensitive. It's gitignored by
+this repo and is expected to be its own nested git repository pushed to a private GitHub
+repo.
+
+```
+~/skillset/
+├── skills/              ← this repo, public
+├── skills-private/      ← separate nested repo, private (gitignored here)
+└── tools/               ← link + validate scan both folders
+```
+
+To set it up on a new machine:
+
+```bash
+cd ~/skillset
+git clone git@github.com:<you>/<private-repo>.git skills-private
+tools/link-skills.sh
+```
+
+`tools/validate.sh` and `tools/link-skills.sh` iterate both `skills/` and (if present)
+`skills-private/`. `skill-maker` will ask which folder to scaffold into.
+
 ## Install
 
 Clone once:

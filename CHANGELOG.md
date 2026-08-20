@@ -6,6 +6,11 @@ All notable changes to this collection are recorded here.
 
 ### Added
 
+- Support for a nested `skills-private/` folder for private skills. The
+  outer public repo gitignores it; `skills-private/` is expected to be its
+  own git repository pushed to a private GitHub repo. `tools/validate.sh`
+  and `tools/link-skills.sh` iterate both folders; `skill-maker` asks
+  "public or private?" before scaffolding.
 - `web-design` — runs a structured five-stage design pass (typography, colour,
   components, motion, accessibility) on a page or section, with the existing
   design system treated as a constraint. Open-source fonts only (Google Fonts,
