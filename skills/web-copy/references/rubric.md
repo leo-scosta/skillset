@@ -148,19 +148,43 @@ Every claim is earned or removed.
 *Sources:* Baymard Institute — trust signals; Google — E-E-A-T guidance;
 NN/g — social proof placement.
 
+## 9. Voice authenticity
+
+Copy reads as written by a person, not a model. Every LLM fingerprint in
+`references/llm-fingerprints.md` is a fail, not a soft.
+
+- No X-not-Y aphoristic closers, especially after a triad.
+- Em-dashes capped at 1 per 100 words.
+- No AI-slop vocabulary (supercharged, AI-powered, harnessing AI, etc.).
+- Any AI claim carries a specific tool, method or measurable outcome in the
+  same paragraph.
+- Parallel structures ("from X to Y") match categories (role → role,
+  discipline → discipline).
+- No filler adverbs (moreover, furthermore, additionally).
+- No hedged verbs (could potentially, may be able to).
+- No "As an X" openers, no "In conclusion" closers.
+- No compound emoji stacks; no double-"I" clauses without a third
+  repetition to earn the anaphora.
+
+Full pattern list and detection heuristics in
+`references/llm-fingerprints.md`.
+
+*Sources:* Session-observed failures 2026; *The Designer's Field Guide* on
+AI-native design; Hiration AI-slop backlash analysis.
+
 ---
 
 ## How to use the rubric in review mode
 
 1. Read the copy end-to-end once, no notes. Form the verdict line.
-2. Read again, marking issues against categories 1–8 in order.
+2. Read again, marking issues against categories 1–9 in order.
 3. In the findings table, group by category, list highest severity first.
-4. Rewrite in one pass. Re-run categories 3 (en-GB), 6 (CTA), and 8 (trust) on
-   the rewrite before returning it.
+4. Rewrite in one pass. Re-run categories 3 (en-GB), 6 (CTA), 8 (trust), and
+   9 (voice authenticity) on the rewrite before returning it.
 
 ## How to use the rubric in draft mode
 
 1. Pick the framework from `frameworks.md`. Name it in output.
 2. Write the draft.
-3. Self-check against categories 3, 4, 6, 7, 8 before returning. Fix in place;
-   don't ship a draft with a rubric fail.
+3. Self-check against categories 3, 4, 6, 7, 8, 9 before returning. Fix in
+   place; don't ship a draft with a rubric fail.

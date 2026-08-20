@@ -58,6 +58,8 @@ Load these on demand — do not load them upfront:
   Ogilvy on headlines). Adds credibility, keeps the skill from inventing rules.
 - `references/sources.md` — when the user asks *why* a rule exists or wants
   further reading.
+- `references/llm-fingerprints.md` — every draft and every review, not
+  optional. Enforcement backbone for category 9 (voice authenticity).
 
 ### 3. Review mode — the output shape
 
@@ -86,7 +88,8 @@ Use the layout in `assets/before-after.md` as the template.
    paragraphs, CTAs, and any microcopy the page needs.
 3. **SEO block** — same fields as review mode.
 4. **Self-check** — a two-line pass confirming en-GB, one H1, tone, active-voice
-   ratio, no unverifiable superlatives.
+   ratio, no unverifiable superlatives, and no LLM fingerprints (see
+   `references/llm-fingerprints.md`).
 
 If the brief is missing something critical (audience, primary action, offer,
 brand voice), ask **once**, list the missing items together, then proceed with
@@ -113,6 +116,9 @@ Use the layout in `assets/brief-template.md` for what a good brief contains.
   `Submit`, `Click here`, or `Learn more`.
 - **One primary CTA per section.** Secondary CTAs may exist but must not
   compete for weight.
+- **Voice authenticity check.** Before returning any draft or rewrite, scan
+  against every pattern in `references/llm-fingerprints.md`. Every fingerprint
+  is a fail — fix in place, don't ship.
 
 ## Edge cases
 
@@ -140,3 +146,8 @@ Use the layout in `assets/brief-template.md` for what a good brief contains.
 - en-GB check has been run: no `-ize`, no `color`, no `favorite`, no Americanisms.
 - One H1 in the rewrite. Not zero, not two.
 - Every superlative is backed or removed.
+- Voice-authenticity scan run: em-dashes ≤ 1 per 100 words, no double-"I"
+  clauses without a third repetition, no AI-slop vocabulary
+  (`supercharged`, `AI-powered`, `harnessing AI`, etc.), no "As an X"
+  openers, no "In conclusion" closers, no X-not-Y aphoristic paragraph
+  closers. Full list in `references/llm-fingerprints.md`.

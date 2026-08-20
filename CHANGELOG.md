@@ -4,6 +4,16 @@ All notable changes to this collection are recorded here.
 
 ## [Unreleased]
 
+### Changed
+
+- `web-copy` — adds a ninth rubric category, **Voice authenticity**, with
+  `references/llm-fingerprints.md` cataloguing 14 LLM-generated-copy fingerprints
+  (X-not-Y aphoristic closers, em-dash overuse, "supercharged" AI-slop vocabulary,
+  unsupported AI claims, role/discipline mismatch in parallel structures, and 9
+  more) and hooks into the always-on rules and both self-check steps so drafts
+  are scanned before returning. `evals/llm-fingerprints.md` holds test snippets
+  for regression testing.
+
 ### Added
 
 - `web-copy` — reviews or drafts website copy at senior-copywriter level. Default en-GB,
