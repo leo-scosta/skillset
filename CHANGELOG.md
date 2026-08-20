@@ -4,6 +4,21 @@ All notable changes to this collection are recorded here.
 
 ## [Unreleased]
 
+### Added
+
+- `web-design` — runs a structured five-stage design pass (typography, colour,
+  components, motion, accessibility) on a page or section, with the existing
+  design system treated as a constraint. Open-source fonts only (Google Fonts,
+  Fontshare, Fontsource); every motion recommendation carries a
+  `prefers-reduced-motion` fallback and a lighter alternative; every
+  text/background pair is contrast-checked to WCAG AA and pushed to AAA where
+  cheap. On-demand references for typography, colour tools, inspiration
+  sources (Awwwards, CollectUI, Framer, Webflow, Godly, Land-book), motion
+  libraries (GSAP, Motion, Three.js, Lenis, View Transitions), accessibility
+  gates, and a personal `voices.md` library seeded with the Mengto repos
+  (Kage, Towers, Sketchbook). Ships a structured review template — Intent,
+  Baseline, Findings, Change list, Snippets, Open questions.
+
 ### Changed
 
 - `web-copy` — adds a ninth rubric category, **Voice authenticity**, with

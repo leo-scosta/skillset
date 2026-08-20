@@ -12,6 +12,7 @@ Copilot, Cursor, and Gemini CLI without modification.
 | --- | --- |
 | [`skill-maker`](skills/skill-maker) | Scaffolds a new skill into this repo — writes `SKILL.md` and `README.md`, seeds eval cases, runs the spec validator. |
 | [`web-copy`](skills/web-copy) | Reviews or drafts website copy at senior-copywriter level — en-GB, SEO-sound, conversion-focused, friendly. Runs a rubric drawn from GOV.UK, NN/g, Google Search Central, Copyhackers, and the direct-response canon. |
+| [`web-design`](skills/web-design) | Runs a five-stage web-design pass — typography, colour, components, motion, accessibility — on a page or section. Open-source fonts only, WCAG AA minimum (AAA where cheap), every motion recommendation paired with a reduced-motion fallback and a lighter alternative. |
 
 ## Install
 
