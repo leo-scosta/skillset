@@ -1,7 +1,7 @@
 # Voice-authenticity evals
 
 Test snippets for the LLM-fingerprint patterns in
-`../references/llm-fingerprints.md` (category 9 in `../references/rubric.md`).
+`llm-fingerprints.md` (category 9 in `rubric.md`).
 
 Each snippet has an **input** (copy that should fail), an **expected flag**
 (pattern name from the fingerprint reference), and an **expected rewrite**

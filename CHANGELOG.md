@@ -11,8 +11,8 @@ All notable changes to this collection are recorded here.
   (X-not-Y aphoristic closers, em-dash overuse, "supercharged" AI-slop vocabulary,
   unsupported AI claims, role/discipline mismatch in parallel structures, and 9
   more) and hooks into the always-on rules and both self-check steps so drafts
-  are scanned before returning. `evals/llm-fingerprints.md` holds test snippets
-  for regression testing.
+  are scanned before returning. `references/llm-fingerprints-tests.md` holds
+  test snippets for regression testing. Skill version bumped to `1.1`.
 
 ### Added
 

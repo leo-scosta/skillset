@@ -4,7 +4,7 @@ description: Review or draft website copy at the level of a senior copywriter in
 license: MIT
 metadata:
   author: leandro-costa
-  version: "1.0"
+  version: "1.1"
   repository: skillset
 ---
 
