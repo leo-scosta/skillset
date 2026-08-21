@@ -12,7 +12,11 @@ Copilot, Cursor, and Gemini CLI without modification.
 | --- | --- |
 | [`skill-maker`](skills/skill-maker) | Scaffolds a new skill into this repo — writes `SKILL.md` and `README.md`, seeds eval cases, runs the spec validator. |
 | [`web-copy`](skills/web-copy) | Reviews or drafts website copy at senior-copywriter level — en-GB, SEO-sound, conversion-focused, friendly. Runs a rubric drawn from GOV.UK, NN/g, Google Search Central, Copyhackers, and the direct-response canon. |
-| [`web-design`](skills/web-design) | Runs a five-stage web-design pass — typography, colour, components, motion, accessibility — on a page or section. Open-source fonts only, WCAG AA minimum (AAA where cheap), every motion recommendation paired with a reduced-motion fallback and a lighter alternative. |
+| [`web-typography`](skills/web-typography) | Picks and refines web typography — display + body pairing from open-source sources (Google Fonts, Fontshare, Fontsource), modular scale, line height and tracking, weight subsetting, WCAG-AA body contrast. |
+| [`web-color`](skills/web-color) | Proposes or audits a web colour palette — 5–8 role tokens, a stated harmony rule, a tool citation (Adobe Color, Coolors, Realtime Colors, Huemint), a full text/background contrast matrix, and a dark-mode pass. |
+| [`web-components`](skills/web-components) | Proposes component patterns (hero, nav, card, form, footer) and layout primitives, every idea cited to a named source (Awwwards, CollectUI, Framer, Webflow, Godly, Land-book), with an aesthetic voice library that grows with the user. |
+| [`web-motion`](skills/web-motion) | Recommends web motion — CSS, View Transitions, Motion, GSAP, Lenis, Three.js — ordered lightest first, each priced in bundle size, each with a `prefers-reduced-motion` fallback and a lighter alternative. |
+| [`web-accessibility`](skills/web-accessibility) | Runs a WCAG 2.2 AA audit on a page or section — contrast, `:focus-visible`, `prefers-reduced-motion`, keyboard order, tap targets, screen-reader hygiene, forms. Failures are blockers. |
 
 ## Private skills
 

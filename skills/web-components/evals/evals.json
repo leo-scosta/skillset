@@ -1,0 +1,22 @@
+{
+  "skill": "web-components",
+  "notes": "Positive cases are phrasings that should load web-components. Negatives cover the four sibling skills (web-typography, web-color, web-motion, web-accessibility), web-copy, and out-of-scope engineering questions.",
+  "cases": [
+    {"prompt": "redesign my hero section", "should_trigger": true},
+    {"prompt": "propose component patterns for a pricing page", "should_trigger": true},
+    {"prompt": "sketch a layout for my portfolio landing page", "should_trigger": true},
+    {"prompt": "give me inspiration for a portfolio nav", "should_trigger": true},
+    {"prompt": "make my about page feel like Kage", "should_trigger": true},
+    {"prompt": "restructure the shape of my testimonial section", "should_trigger": true},
+    {"prompt": "here's an Awwwards site I like — redesign my hero to match the vibe", "should_trigger": true},
+    {"prompt": "what container width and grid should this landing page use", "should_trigger": true},
+    {"prompt": "pick fonts for my site", "should_trigger": false},
+    {"prompt": "help me choose a colour palette", "should_trigger": false},
+    {"prompt": "add scroll animations to my hero", "should_trigger": false},
+    {"prompt": "audit the accessibility of my form", "should_trigger": false},
+    {"prompt": "rewrite the hero copy to be more persuasive", "should_trigger": false},
+    {"prompt": "build me a contact form", "should_trigger": false},
+    {"prompt": "why isn't my flexbox aligning", "should_trigger": false},
+    {"prompt": "which framework should I use for this project", "should_trigger": false}
+  ]
+}

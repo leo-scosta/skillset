@@ -1,0 +1,22 @@
+{
+  "skill": "web-motion",
+  "notes": "Positive cases are phrasings that should load web-motion. Negatives cover the four sibling skills (web-typography, web-color, web-components, web-accessibility), web-copy, and out-of-scope engineering questions.",
+  "cases": [
+    {"prompt": "add scroll animations to my portfolio", "should_trigger": true},
+    {"prompt": "propose hero motion for my landing page", "should_trigger": true},
+    {"prompt": "I want a Three.js hero — what would you suggest", "should_trigger": true},
+    {"prompt": "wire GSAP ScrollTrigger for a pinned section", "should_trigger": true},
+    {"prompt": "should I add Lenis smooth scroll to this site", "should_trigger": true},
+    {"prompt": "make this section feel more dynamic on scroll", "should_trigger": true},
+    {"prompt": "add page transitions with the View Transitions API", "should_trigger": true},
+    {"prompt": "make sure my hero animation has a reduced-motion fallback", "should_trigger": true},
+    {"prompt": "pick fonts for my site", "should_trigger": false},
+    {"prompt": "help me choose a colour palette", "should_trigger": false},
+    {"prompt": "redesign my hero section", "should_trigger": false},
+    {"prompt": "audit the accessibility of my form", "should_trigger": false},
+    {"prompt": "rewrite the hero copy", "should_trigger": false},
+    {"prompt": "why isn't my flexbox aligning", "should_trigger": false},
+    {"prompt": "which framework should I use", "should_trigger": false},
+    {"prompt": "help me set up Tailwind v4", "should_trigger": false}
+  ]
+}

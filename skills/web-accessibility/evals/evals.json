@@ -1,0 +1,22 @@
+{
+  "skill": "web-accessibility",
+  "notes": "Positive cases are phrasings that should load web-accessibility. Negatives cover the four sibling skills (web-typography, web-color, web-components, web-motion), web-copy, and out-of-scope engineering questions.",
+  "cases": [
+    {"prompt": "run an accessibility audit on my landing page", "should_trigger": true},
+    {"prompt": "WCAG AA check on this site", "should_trigger": true},
+    {"prompt": "audit the contrast on my palette and fix what fails", "should_trigger": true},
+    {"prompt": "review the focus states across my form", "should_trigger": true},
+    {"prompt": "check keyboard navigation on my nav menu", "should_trigger": true},
+    {"prompt": "audit reduced-motion on my hero animation", "should_trigger": true},
+    {"prompt": "make my form accessible for screen readers", "should_trigger": true},
+    {"prompt": "check tap-target sizes on mobile", "should_trigger": true},
+    {"prompt": "pick fonts for my site", "should_trigger": false},
+    {"prompt": "help me choose a colour palette from this image", "should_trigger": false},
+    {"prompt": "redesign my hero section", "should_trigger": false},
+    {"prompt": "add scroll animations to my portfolio", "should_trigger": false},
+    {"prompt": "rewrite the copy on my landing page", "should_trigger": false},
+    {"prompt": "rename --color-ink to --color-text", "should_trigger": false},
+    {"prompt": "which framework should I use for this project", "should_trigger": false},
+    {"prompt": "my navbar is broken on mobile", "should_trigger": false}
+  ]
+}

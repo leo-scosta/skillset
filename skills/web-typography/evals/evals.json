@@ -1,0 +1,24 @@
+{
+  "skill": "web-typography",
+  "notes": "Positive cases are phrasings that should load web-typography. Negatives cover the four sibling skills (web-color, web-components, web-motion, web-accessibility), web-copy, and out-of-scope work like framework choice, paid-font requests, and token renames.",
+  "cases": [
+    {"prompt": "pick fonts for my landing page", "should_trigger": true},
+    {"prompt": "propose a font pairing for a design agency site", "should_trigger": true},
+    {"prompt": "set up a modular type scale for this project", "should_trigger": true},
+    {"prompt": "which typeface should I use for my portfolio", "should_trigger": true},
+    {"prompt": "make my typography feel more editorial", "should_trigger": true},
+    {"prompt": "add a display font to pair with Inter", "should_trigger": true},
+    {"prompt": "fix the line height on my body copy", "should_trigger": true},
+    {"prompt": "recommend an open-source serif for headings", "should_trigger": true},
+    {"prompt": "review the type stack on my homepage", "should_trigger": true},
+    {"prompt": "help me choose a colour palette from this image", "should_trigger": false},
+    {"prompt": "redesign my hero section", "should_trigger": false},
+    {"prompt": "add scroll animations to my portfolio", "should_trigger": false},
+    {"prompt": "audit the accessibility of my form", "should_trigger": false},
+    {"prompt": "rewrite the copy on my landing page", "should_trigger": false},
+    {"prompt": "buy me an Adobe Fonts subscription and pick a font", "should_trigger": false},
+    {"prompt": "rename --font-display to --font-heading", "should_trigger": false},
+    {"prompt": "which framework should I use for this project", "should_trigger": false},
+    {"prompt": "my navbar is broken on mobile", "should_trigger": false}
+  ]
+}

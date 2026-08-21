@@ -11,18 +11,31 @@ All notable changes to this collection are recorded here.
   own git repository pushed to a private GitHub repo. `tools/validate.sh`
   and `tools/link-skills.sh` iterate both folders; `skill-maker` asks
   "public or private?" before scaffolding.
-- `web-design` — runs a structured five-stage design pass (typography, colour,
-  components, motion, accessibility) on a page or section, with the existing
-  design system treated as a constraint. Open-source fonts only (Google Fonts,
-  Fontshare, Fontsource); every motion recommendation carries a
-  `prefers-reduced-motion` fallback and a lighter alternative; every
-  text/background pair is contrast-checked to WCAG AA and pushed to AAA where
-  cheap. On-demand references for typography, colour tools, inspiration
-  sources (Awwwards, CollectUI, Framer, Webflow, Godly, Land-book), motion
-  libraries (GSAP, Motion, Three.js, Lenis, View Transitions), accessibility
-  gates, and a personal `voices.md` library seeded with the Mengto repos
-  (Kage, Towers, Sketchbook). Ships a structured review template — Intent,
-  Baseline, Findings, Change list, Snippets, Open questions.
+- `web-typography`, `web-color`, `web-components`, `web-motion`,
+  `web-accessibility` — five focused skills that split the previous
+  `web-design` five-stage pass into independently triggerable pieces, so
+  each stage can be reached for on its own ("pick fonts", "audit
+  contrast", "redesign my hero", "add scroll animations", "WCAG AA
+  check") without paying the cost of the whole pass. Each skill carries
+  its own tightened `description`, its own `assets/review-template.md`,
+  its own `evals/evals.json` (positive cases specific to the stage,
+  negative cases covering the other four), and the stage's reference
+  file (`typography.md`, `color.md`, `inspiration.md` + `voices.md`,
+  `motion.md`, `accessibility.md`) moved from `web-design` with history
+  preserved. Rules retained per stage: open-source fonts only in
+  typography, WCAG AA minimum on colour and accessibility (AAA where
+  cheap), reduced-motion fallback and lighter alternative on every
+  motion recommendation, no token renames anywhere, cite every
+  inspiration source specifically.
+
+### Removed
+
+- `web-design` — split into the five focused skills above. The umbrella
+  skill's `description` had to cover five different topic areas at once,
+  which weakened each individual trigger; splitting was flagged in the
+  original README as a rejected alternative and is now the accepted
+  approach. No single "run the full pass in one shot" entry point
+  remains — compose the five skills in sequence for the same result.
 
 ### Changed
 

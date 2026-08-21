@@ -1,0 +1,22 @@
+{
+  "skill": "web-color",
+  "notes": "Positive cases are phrasings that should load web-color. Negatives cover the four sibling skills (web-typography, web-components, web-motion, web-accessibility), web-copy, and out-of-scope work like token renames or framework choice.",
+  "cases": [
+    {"prompt": "help me choose a colour palette", "should_trigger": true},
+    {"prompt": "extract a colour scheme from this reference image", "should_trigger": true},
+    {"prompt": "audit the contrast on my palette and fix what fails", "should_trigger": true},
+    {"prompt": "propose a dark-mode palette for this site", "should_trigger": true},
+    {"prompt": "pick an accent colour that works with my existing tokens", "should_trigger": true},
+    {"prompt": "build a role-token colour system for my design", "should_trigger": true},
+    {"prompt": "which harmony rule should I use for a warm editorial site", "should_trigger": true},
+    {"prompt": "check every text/background pair for WCAG AA", "should_trigger": true},
+    {"prompt": "pick fonts for my site", "should_trigger": false},
+    {"prompt": "redesign my hero section", "should_trigger": false},
+    {"prompt": "add a Three.js hero animation", "should_trigger": false},
+    {"prompt": "run an accessibility audit on my whole site", "should_trigger": false},
+    {"prompt": "rewrite the copy on my pricing page", "should_trigger": false},
+    {"prompt": "rename --color-ink to --color-text", "should_trigger": false},
+    {"prompt": "help me set up Tailwind v4", "should_trigger": false},
+    {"prompt": "why isn't my flexbox aligning", "should_trigger": false}
+  ]
+}
