@@ -39,6 +39,12 @@ All notable changes to this collection are recorded here.
 
 ### Changed
 
+- `web-typography` — Reference intake now requires reading measurable
+  details off the reference (case, tracking, weight, width, extenders),
+  not only naming the aesthetic direction. Added to *Checks before
+  finishing*. Prevents the failure mode of recommending the right family
+  but the wrong rendering (e.g. Sentence-case Boldonse when the reference
+  was ALL-CAPS Neue Machina at -0.04em tracking).
 - `web-copy` — adds a ninth rubric category, **Voice authenticity**, with
   `references/llm-fingerprints.md` cataloguing 14 LLM-generated-copy fingerprints
   (X-not-Y aphoristic closers, em-dash overuse, "supercharged" AI-slop vocabulary,

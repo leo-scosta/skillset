@@ -61,6 +61,29 @@ serif / display serif / mono / brutalist), weight vocabulary (light and
 airy vs. heavy display), and rhythm (dense editorial vs. generous marketing).
 This becomes the target the pairing has to hit.
 
+**Then read the reference for measurable details, not just adjectives.**
+Adjectives ("wide", "heavy", "condensed") describe the target; measurements
+match it. Before proposing anything, name each of these from the image:
+
+- **Case** — caps, sentence case, or mixed? A caps reference reads very
+  differently from its mixed-case equivalent; do not copy the *font*
+  without noticing the *case*.
+- **Tracking** — reference letters almost touching means negative tracking
+  (-0.03 to -0.05em on heavy display); airy references sit near 0 or
+  positive. Eyeball the gaps between letters and estimate an em value.
+- **Weight** — count stroke thickness against the counter (the hole inside
+  `o` / `e`). A stroke as wide as the counter is ~900; half as wide is ~400.
+- **Width** — standard cut or extended? Compare an `H` — square-ish is
+  standard; obviously wider than tall means a wide axis is in play
+  (Anybody, Archivo Narrow, etc.).
+- **Extenders** — tall ascenders/descenders (Boldonse, Fraunces) force
+  looser line-height; short extenders (Archivo Black, Space Grotesk) sit
+  comfortably tight.
+
+Skipping this step is how you recommend the right *family* with the wrong
+*rendering* — the user has to tell you the letters are too spaced, or too
+airy, or the reference was uppercase all along.
+
 If nothing was shared, treat the current page as the baseline to polish.
 
 ### 4. Pairing + scale
@@ -134,3 +157,6 @@ Use `assets/review-template.md` for the output shape.
 - Body copy contrast ratio is stated with its background.
 - No paid or restricted-licence font appears in the change list.
 - No token rename appears in the change list.
+- If a reference was supplied, **case, tracking, weight, width, and
+  extenders were named as measurements**, not just adjectives — and the
+  proposal matches each one, not only the family category.
